@@ -23,7 +23,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 config = {
   :key           => '_normandy_session',
-  :secret        => (Setting.get("session_secret_key", SecureRandom.hex(64), set_if_nx: true) rescue SecureRandom.hex(64))
+  :secret => 'cbcad43510fffcd090b07a0a1767114f6a177347986c1020bec8e6a41733fd52'
 }.merge((ConfigFile.load("session_store") || {}).symbolize_keys)
 
 # :expire_after is the "true" option, and :expires is a legacy option, but is applied
